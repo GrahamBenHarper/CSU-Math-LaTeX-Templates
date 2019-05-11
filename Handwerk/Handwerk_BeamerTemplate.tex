@@ -1,0 +1,145 @@
+\documentclass[10pt,xcolor={dvipsnames}]{beamer}
+\usetheme[
+%%% option passed to the outer theme
+%    progressstyle=fixedCircCnt,   % fixedCircCnt, movingCircCnt (moving is deault)
+  ]{Feather}
+
+\graphicspath{{./figures/}}
+% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
+\definecolor{CSUGreen}{RGB}{30,77,46}
+\definecolor{CSUGold}{RGB}{200,195,114}
+\definecolor{CSUOrange}{RGB}{217,120,45}
+\definecolor{CSUBlack}{RGB}{89,89,91}
+% Change the bar colors:
+\setbeamercolor{Feather}{fg=CSUGreen!20,bg=CSUGreen}
+
+% Change the color of the structural elements:
+\setbeamercolor{structure}{fg=CSUGreen}
+
+% Change the frame title text color:
+\setbeamercolor{frametitle}{fg=black!5}
+
+% Change the normal text colors:
+\setbeamercolor{normal text}{fg=black!75,bg=CSUBlack!5}
+
+%% Change the block title colors
+\setbeamercolor{block title}{use=Feather,bg=Feather.fg, fg=black!90}
+
+
+% Change the logo in the upper right circle:
+\renewcommand{\logofile}{/ramhead}
+%% This is an image that comes with the LaTeX installation
+% Adjust scale of the logo w.r.t. the circle; default is 0.875
+% \renewcommand{\logoscale}{0.55}
+
+% Change the background image on the title and final page.
+% It stretches to fill the entire frame!
+% \renewcommand{\backgroundfile}{example-grid-100x100pt}
+
+%-------------------------------------------------------
+% INCLUDE PACKAGES
+%-------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{bm}
+\usepackage{amsmath, mathtools}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multimedia}
+
+% \usepackage{helvet}
+
+%% Load different font packages to use different fonts
+%% e.g. using Linux Libertine, Linux Biolinum and Inconsolata
+% \usepackage{libertine}
+% \usepackage{zi4}
+
+%% e.g. using Carlito and Caladea
+%\usepackage{carlito}
+%\usepackage{caladea}
+%\usepackage{zi4}
+
+%% e.g. using Venturis ADF Serif and Sans
+% \usepackage{venturis}
+
+% colored hyperlinks
+\newcommand{\chref}[2]{
+  \href{#1}{{\usebeamercolor[bg]{Feather}#2}}
+}
+
+
+\title[BOTTOM TITLE TEXT] % [] is optional - is placed on the bottom of the sidebar on every slide
+{
+      \textbf{TOP TITLE TEXT}
+}
+
+%\subtitle[The Feather Beamer Theme]
+%{
+%      \textbf{v. 1.1.0}
+%}
+
+\author[(AUTHOR BOTTOM NAME)] % [] is optional - is placed on the bottom of the sidebar on every slide
+{
+      Lee A. Zon
+}
+
+\institute[Colorado State University]
+{
+      Colorado State University
+}
+
+\date{May 7, 3435}
+
+\usepackage{lipsum}
+\begin{document}
+{\1% % this is the name of the PDF file for the background
+\begin{frame}[plain,noframenumbering]
+  \titlepage
+\end{frame}}
+
+
+\begin{frame}{Introduction}
+  \lipsum[1]
+
+  \begin{itemize}
+    \item Sample list item
+    \item Sample list item
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Equations}
+  Sample equation
+
+  \begin{align}
+    F(s) = \int_0^s e^{-st} f(t) \ dt
+  \end{align}
+  
+  Sample enumerate
+  \begin{enumerate}
+    \item Sample list item
+    \item Sample list item
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Figures}
+  Sample figure
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{1.jpg}
+    \caption{Sample figure caption}
+    \label{fig:test_figure}
+  \end{figure}
+\end{frame}
+
+{\1
+\begin{frame}[plain,noframenumbering]
+  \finalpage{
+  
+  Thank you!}
+\end{frame}}
+\end{document}

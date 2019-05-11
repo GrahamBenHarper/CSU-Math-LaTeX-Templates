@@ -1,0 +1,131 @@
+
+\documentclass[usenames,dvipsnames]{beamer}
+\mode<presentation>{\usetheme{Warsaw}}
+\usepackage{textpos} %package for text positioning
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Normal Math Packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{ragged2e}
+\usepackage{mathrsfs}
+\usepackage{color, xcolor}
+\usepackage{soul}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Pseudocode
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Remove buttons
+\setbeamertemplate{navigation symbols}{}
+
+%Stuff to make things look good
+% Color modification
+\setbeamercolor{structure}{fg=green!30!black}% to modify  immediately all palettes
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{title in head/foot}{fg=yellow}
+
+%Size Modification
+\setbeamerfont{frametitle}{size=\small}
+
+% position the logo
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{1cm}(\textwidth,-1.1cm)
+\includegraphics[height=.9cm,width=.9cm,keepaspectratio]{csu.png}
+\end{textblock*}}
+% Text Positioning
+\usepackage[absolute,overlay]{textpos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Font
+%\fontfamily{cmr}\selectfont
+\usefonttheme{serif}
+
+%% preamble
+\title[TITLE BOTTOM TEXT] % [] is optional - is placed on the bottom of the sidebar on every slide
+{
+      \textbf{TITLE TOP TEXT}
+}
+
+\subtitle[SUBTITLE BOTTOM TEXT]
+{
+      \textbf{SUBTITLE TOP TEXT}
+}
+
+\author[(AUTHOR BOTTOM TEXT)] % [] is optional - is placed on the bottom of the sidebar on every slide
+{
+      Lee A. Zon
+}
+
+\institute[Colorado State University]
+{
+      Colorado State University
+}
+
+\date{May 7, 3435}
+
+\usepackage{lipsum}
+\begin{document}
+
+%%Title Frame
+{
+\setbeamertemplate{headline}{}
+\addtobeamertemplate{frametitle}{\vspace*{-0.9\baselineskip}}{}
+\begin{frame}
+  \titlepage
+\end{frame}
+}
+
+\section{Introduction}
+\subsection{Lipsum}
+\begin{frame}{Introduction}
+  \lipsum[1]
+
+  \begin{itemize}
+    \item Sample list item
+    \item Sample list item
+  \end{itemize}
+\end{frame}
+
+\subsection{Equations}
+\begin{frame}{Equations}
+  Sample equation
+
+  \begin{align}
+    F(s) = \int_0^s e^{-st} f(t) \ dt
+  \end{align}
+  
+  Sample enumerate
+  \begin{enumerate}
+    \item Sample list item
+    \item Sample list item
+  \end{enumerate}
+\end{frame}
+
+\section{Figures}
+\subsection{Sample Figure}
+\begin{frame}{Figures}
+  Sample figure
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Handwerk/figures/1.jpg}
+    \caption{Sample figure caption}
+    \label{fig:test_figure}
+  \end{figure}
+\end{frame}
+
+\subsection{Thank You}
+\begin{frame}[noframenumbering]{Thank you!}
+
+\end{frame}
+\end{document}
